@@ -18,7 +18,7 @@ namespace Mission06_Metler.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult GetToKnowJoel()
         {
             return View();
         }
