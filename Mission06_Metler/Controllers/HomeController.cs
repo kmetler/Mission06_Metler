@@ -22,5 +22,17 @@ namespace Mission06_Metler.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult NewMovie()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult NewMovie()
+        {
+
+        }
     }
 }
