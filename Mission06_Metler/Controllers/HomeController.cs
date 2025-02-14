@@ -6,11 +6,11 @@ namespace Mission06_Metler.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private NewMovieContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(NewMovieContext temp) //Constuctor
         {
-            _logger = logger;
+            _context = temp;
         }
 
         public IActionResult Index()
@@ -30,9 +30,12 @@ namespace Mission06_Metler.Controllers
         }
 
         [HttpPost]
-        public IActionResult NewMovie()
+        public IActionResult NewMovie(NewMovie response)
         {
+            _context.Movies.Add(response); //Add record to the database
+            _context.SaveChanges();
 
+            return View();
         }
     }
 }
