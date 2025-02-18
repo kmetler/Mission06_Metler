@@ -35,7 +35,7 @@ namespace Mission06_Metler.Controllers
             _context.Movies.Add(response); //Add record to the database
             _context.SaveChanges();
 
-            return View();
+            return View("Confirmation");
         }
     }
 }
