@@ -31,7 +31,7 @@ namespace Mission06_Metler.Controllers
                 .OrderBy(x => x.CategoryName)
                 .ToList();
 
-            return View();
+            return View(new NewMovie());
         }
 
         [HttpPost]
