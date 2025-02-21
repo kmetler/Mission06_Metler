@@ -12,7 +12,7 @@ namespace Mission06_Metler.Models
 
         [ForeignKey("CategoryId")]
         public int? CategoryId { get; set; }
-        public Category? Category { get; set; }
+        public virtual Category? Category { get; set; }
 
         [Required]
         public string Title { get; set; }

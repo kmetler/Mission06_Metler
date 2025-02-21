@@ -1,4 +1,4 @@
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Mission06_Metler.Models;
@@ -54,11 +54,14 @@ namespace Mission06_Metler.Controllers
             }
         }
 
+        [HttpGet]
         public IActionResult MovieList()
         {
             var movies = _context.Movies
                 .Include(x => x.Category)
-                .OrderBy(x => x.Title).ToList();
+                .OrderBy(x => x.Title)
+                .ToList();
+
 
             return View(movies);
         }
