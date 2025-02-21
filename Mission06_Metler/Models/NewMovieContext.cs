@@ -9,5 +9,7 @@ namespace Mission06_Metler.Models
         }
 
         public DbSet<NewMovie> Movies { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
     }   
 }
